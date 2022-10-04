@@ -1,0 +1,33 @@
+body{
+    background-image:url(pppp.png);
+}
+#display{
+    background-color:wheat;
+    height: 100px;
+    width: 100px;
+    padding: 100px;
+    margin: 200px;
+    margin-left: 400px;
+    border: white;
+    border-radius: 30px;
+    box-shadow:10px 10px 10px;
+}
+.dara{
+    width: 100px;
+    height: 50px;
+    margin-bottom:5px;
+    border: black;
+    border-radius: 10px;
+}
+.mara{
+    color:black;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    text-align: center;
+}
+.non{
+    border: wheat;
+    border-radius: 10px;
+    background-color: red;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}

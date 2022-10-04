@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gradingsystem.css">
+    <title>Document</title>
+   
+</head>
+<body>
+   <section>
+       
+        <div id="display"> 
+            <h1 class="mara">
+               <marquee behavior="slow" direction="right"> gradingsystem</marquee>
+            </h1>
+            
+            <input type="text" placeholder="Enter your score" id="userScore" class="dara">
+            <div id="disp"></div>
+            <button onclick="gradeMe()" class="non">MY SCORE</button> <br><br>
+    </div>
+   </section>
+    <script>
+         var mySong = new Audio("failure.mp3")
+         var mySchool = new Audio("congrat.mp3")
+         var myHome = new Audio("credit.mp3")
+
+        
+    function gradeMe(){
+        var scoreOfUser = Number(userScore.value)
+        
+        disp.innerText = scoreOfUser
+        if(scoreOfUser<=39)
+        {
+            disp.innerHTML = "F"
+            disp.style.backgroundColor = "red"
+            mySong.play()
+        }
+        else if(scoreOfUser>= 40 && scoreOfUser<45)
+         {
+            disp.innerHTML = "E"
+            disp.style.backgroundColor = "yellow"
+            mySong.play()
+        }
+else if(scoreOfUser>=45 && scoreOfUser<50){
+    disp.innerHTML =  "D"
+    disp.style.backgroundColor = "orange"
+    myHome.play()
+}
+else if(scoreOfUser>=50 && scoreOfUser<60){
+    disp.innerHTML = "C"
+    disp.style.backgroundColor = "purple"
+    myHome.play()
+}
+else if(scoreOfUser>=60 && scoreOfUser<70){
+    disp.innerHTML = "B"
+    disp.style.backgroundColor = "blue"
+    mySchool.play()
+}
+else if(scoreOfUser>=70 && scoreOfUser<=100){
+    disp.innerHTML = "A"
+    disp.style.backgroundColor = "wheat"
+    disp.innerHTML = "EXECLLENT"
+    mySchool.play()
+}
+else if(scoreOfUser>100) {
+    disp.innerHTML =  "out of grades"
+    disp.style.backgroundColor = "red"
+    mySchool.play()
+    }
+    else {
+        disp.innerHTML =  "invalid"
+        disp.style.backgroundColor = "yellow"
+        mySong.play()
+    }
+}
+    </script>   
+</body>
+</html>
